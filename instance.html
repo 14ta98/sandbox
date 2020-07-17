@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mapの考え方おさらい</title>
+    <title>mapのおさらい</title>
 </head>
 <body>
     <script type="text/javascript">
@@ -14,7 +14,6 @@
 
     var person1 = new Person(); // person1インスタンス生成
     var person2 = new Person(); // person2インスタンス生成
-    var person3 = new Person(); // person3インスタンス生成
 
     var Person = function (name,age,born) {
     this.name = name;
@@ -25,29 +24,10 @@
 
     var person1 = new Person('山田',15,"東京");
     var person2 = new Person('田中',20,"栃木");
-    var person3 = new Person('佐藤',25,"青森");
-
-    function fuga() {
-        var hoge1 = person1;
-        var hoge2 = person2; 
-        var hoge3 = person3; 
-        var hoge4 = [hoge1,hoge2,hoge3]
-        fuga2(hoge4);
-    }
-
-    fuga();
-
-    function fuga2(hoge4) {
-        console.log(hoge4)
-        // ☆hoge3の値だけ出力したい。記載方法検討中
-        // 配列の場合は連想配列にして、利用するイメージをできている。オブジェクトの場合は？map?
-        // condole.log(hoge4の中のhoge2のnameを出す)としたい。
-    }
 
     // オブジェクトのname、age、bornプロパティを表示する
     console.log('person1 is ' + person1.name +  ' ' + person1.age + '才 ' + person1.born);
     console.log('person2 is ' + person2.name +  ' ' + person2.age + '才 ' + person2.born);
-    console.log('person3 is ' + person3.name +  ' ' + person3.age + '才 ' + person3.born);
     
     </script>
 </body>
